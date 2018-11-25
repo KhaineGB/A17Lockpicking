@@ -1,0 +1,57 @@
+<configs>
+	<append xpath="/items">
+		<!-- Adding the lockpick item -->
+		<item name="toolLockpick">	
+		<property name="Tags" value="knife,melee,light,tool,lockpick"/>
+		<property name="CustomIcon" value="Lockpick" />
+		<property name="DisplayType" value="meleeRepairTool"/>
+		<property name="HoldType" value="36"/>
+		<property name="Meshfile" value="Items/Weapons/Melee/Knives/boneShivPrefab"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="RepairTools" value="resourceScrapIron"/>
+		<property name="EconomicValue" value="5"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="wooddestroy1"/>
+		<property class="Action0">
+			<property name="Class" value="Repair"/>
+			<property name="Delay" value="1"/> 
+			<property name="Repair_amount" value="100"/>
+			<property name="Upgrade_hit_offset" value="0"/>
+			<property name="Sound_start" value="repair_block"/>
+			<property name="Allowed_upgrade_items" value="toolLockpick"/>
+			<property name="UsePowerAttackAnimation" value="false"/>
+		</property>
+		<property class="Action1"> 
+			<property name="Class" value="Repair"/>
+			<property name="Delay" value="1"/> 
+			<property name="Repair_amount" value="100"/>
+			<property name="Upgrade_hit_offset" value="0"/>
+			<property name="Sound_start" value="repair_block"/>
+			<property name="Allowed_upgrade_items" value="toolLockpick"/>
+			<property name="UsePowerAttackAnimation" value="false"/>
+		</property>
+		<effect_group name="Base Effects">
+			<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+			<passive_effect name="BlockRange" operation="base_set" value="3"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="0"/> 
+			<passive_effect name="BlockDamage" operation="base_set" value="26"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/> 
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="14" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="70,200" tier="1,6"/>
+			<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+		</effect_group>
+		<property name="Group" value="Tools/Traps,Basics"/>
+		<property name="ActionSkillGroup" value="Construction Tools"/>
+		<property name="CraftingSkillGroup" value="craftSkillTools"/>
+		<property name="RepairExpMultiplier" value="5.5"/>
+		</item>	
+	</append>
+</configs>
