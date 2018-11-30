@@ -3,16 +3,18 @@
 		<!-- Adding the lockpick item -->
 		<item name="toolLockpick">	
 			<property name="CustomIcon" value="Lockpick" />
+			<property name="Tags" value="knife,melee,light,tool,lockpick"/>
 			<property name="DisplayType" value="adminRanged"/>
 			<property name="HoldType" value="36"/>
 			<property name="Meshfile" value="Items/Weapons/Melee/Knives/boneShivPrefab"/>
 			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
 			<property name="Stacknumber" value="20"/>
 			<property name="DegradationBreaksAfter" value="true"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="CrosshairUpAfterShot" value="true"/>
 			<property name="CrosshairOnAim" value="true"/>
-			<property class="Action0">
+			<!-- <property class="Action0">
 				<property name="Class" value="Repair"/>
 				<property name="Delay" value="1"/> 
 				<property name="Repair_amount" value="100"/>
@@ -20,7 +22,7 @@
 				<property name="Sound_start" value="repair_block"/>
 				<property name="Allowed_upgrade_items" value="toolLockpick"/>
 				<property name="UsePowerAttackAnimation" value="false"/>
-			</property>
+			</property> -->
 			<property class="Action1"> 
 				<property name="Class" value="Repair"/>
 				<property name="Delay" value="1"/> 
@@ -40,6 +42,6 @@
 			<property name="ActionSkillGroup" value="Construction Tools"/>
 			<property name="CraftingSkillGroup" value="craftSkillTools"/>
 			<property name="RepairExpMultiplier" value="5.5"/>
-		</item>	
+		</item>	-->
 	</append>
 </configs>
