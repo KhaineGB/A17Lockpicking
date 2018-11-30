@@ -42,6 +42,6 @@
 			<property name="ActionSkillGroup" value="Construction Tools"/>
 			<property name="CraftingSkillGroup" value="craftSkillTools"/>
 			<property name="RepairExpMultiplier" value="5.5"/>
-		</item>	-->
+		</item>
 	</append>
 </configs>
